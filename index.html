@@ -29,7 +29,7 @@
     <div id="about">
       <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
       <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-      <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a
+      <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a
           href="https://we2004.github.io/my-portfolio/">https://we2004.github.io/my-portfolio/</a></span>
       <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
       <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
@@ -41,8 +41,9 @@
             class="socials"><i class="fab fa-x-twitter"></i></a></span>
 
         <!-- linkedin -->
-        <span style="display:block !important;"><a href="www.linkedin.com/in/wesal-ismail-410372330" target="_blank"
-            class="socials"><i class="fab fa-linkedin-in"></i></a></span>
+        <span style="display:block !important;"><a
+            href="https://www.linkedin.com/in/wesal-ismail-410372330?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
 
         <!-- github -->
         <span style="display:block !important;"><a href="mailto:wsalasmayl363@gmail.com" class="socials"><i
@@ -140,102 +141,69 @@
 
 
     <div id="featured-projects">
-      <h1>Featured Projects</h1>
+      <h1>Projects Gallery</h1>
       <div class="featured-projects">
-        <article class="project-card">
-          <h2>Weather Dashboard</h2>
-          <div class="project-card__screenshots">
-            <div class="screenshot-card">
-              <img src="images/background-1.jpg" alt="Weather Dashboard screenshot 1">
-              <p class="project-caption">Dashboard overview</p>
-            </div>
-            <div class="screenshot-card">
-              <img src="images/background-2.jpg" alt="Weather Dashboard screenshot 2">
-              <p class="project-caption">Forecast details</p>
-            </div>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <h2>Movie Explorer</h2>
-          <div class="project-card__screenshots">
-            <div class="screenshot-card">
-              <img src="images/background-1.jpg" alt="Movie Explorer screenshot 1">
-              <p class="project-caption">Search and discover</p>
-            </div>
-            <div class="screenshot-card">
-              <img src="images/background-2.jpg" alt="Movie Explorer screenshot 2">
-              <p class="project-caption">Movie details view</p>
-            </div>
-          </div>
-        </article>
+        <div class="screenshot-card">
+          <img src="images/weather-dashboard-1.png" alt="Weather Dashboard screenshot">
+        </div>
 
-        <article class="project-card">
-          <h2>Nebula</h2>
-          <div class="project-card__screenshots">
-            <div class="screenshot-card">
-              <img src="images/background-1.jpg" alt="Nebula screenshot 1">
-              <p class="project-caption">Featured space imagery</p>
-            </div>
-            <div class="screenshot-card">
-              <img src="images/background-2.jpg" alt="Nebula screenshot 2">
-              <p class="project-caption">Image details panel</p>
-            </div>
-          </div>
-        </article>
+        <div class="screenshot-card">
+          <img src="images/guess-1.png" alt="Guess the Secret Number screenshot">
+        </div>
 
-        <article class="project-card">
-          <h2>Guess The Secret Number</h2>
-          <div class="project-card__screenshots">
-            <div class="screenshot-card">
-              <img src="images/background-1.jpg" alt="Guess The Secret Number screenshot 1">
-              <p class="project-caption">Game interface</p>
-            </div>
-            <div class="screenshot-card">
-              <img src="images/background-2.jpg" alt="Guess The Secret Number screenshot 2">
-              <p class="project-caption">Gameplay results</p>
-            </div>
-          </div>
-        </article>
+
+        <div class="screenshot-card">
+          <img src="images/movie-2.png" alt="Movie Explorer screenshot">
+        </div>
+
+        <div class="screenshot-card">
+          <img src="images/movie-1.png" alt="Movie Explorer screenshot">
+        </div>
+
+        <div class="screenshot-card">
+          <img src="images/nebula-2.png" alt="Nebula screenshot">
+        </div>
+
+        <div class="screenshot-card">
+          <img src="images/nebula-1.png" alt="Nebula screenshot">
+        </div>
+
+
+
+      </div>
+
+
+
+      <div id="forks" style="display:none;">
+        <h1>Forks.</h1>
+        <div class="projects" id="forks_section"></div>
+      </div>
+      
+
+      
+      <div id="footer">
+        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
       </div>
     </div>
-
-
-
-
-
-
-
-    <div id="forks" style="display:none;">
-      <h1>Forks.</h1>
-      <div class="projects" id="forks_section"></div>
-    </div>
-    <div id="blog_section">
-      <h1>Blog.</h1>
-      <div id="blogs"></div>
-    </div>
-    <div id="footer">
-      <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
-    </div>
-  </div>
-  <script type="text/javascript">
-    setTimeout(function () {
-      document.getElementById("loading").classList.add("animated");
-      document.getElementById("loading").classList.add("fadeOut");
+    <script type="text/javascript">
       setTimeout(function () {
-        document.getElementById("loading").classList.remove("animated");
-        document.getElementById("loading").classList.remove("fadeOut");
-        document.getElementById("loading").style.display = "none";
-      }, 800);
-    }, 1500);
-    $.getJSON("blog.json", function (blog) {
-      blog = blog || [];
-      if (blog.length == 0) {
-        return (document.getElementById("blog_section").style.display =
-          "none");
-      }
-      for (var i = 0; i < blog.length; i++) {
-        $("#blogs").append(`
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function () {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("blog.json", function (blog) {
+        blog = blog || [];
+        if (blog.length == 0) {
+          return (document.getElementById("blog_section").style.display =
+            "none");
+        }
+        for (var i = 0; i < blog.length; i++) {
+          $("#blogs").append(`
             <a href="./blog/${blog[i].url_title}/" target="_blank">
                 <section>
                     <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
@@ -248,38 +216,38 @@
                 </section>
             </a>
             `);
-      }
-    }).fail(function () {
-      return (document.getElementById("blog_section").style.display = "none");
-    });
-  </script>
+        }
+      }).fail(function () {
+        return (document.getElementById("blog_section").style.display = "none");
+      });
+    </script>
 
-  <script>
-    const magicProjectsGrid = new MagicGrid({
-      container: "#work_section",
-      animate: false,
-      gutter: 30, // default gutter size
-      static: true,
-      useMin: false,
-      maxColumns: 2,
-      useTransform: true
-    });
+    <script>
+      const magicProjectsGrid = new MagicGrid({
+        container: "#work_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-    const magicForksGrid = new MagicGrid({
-      container: "#forks_section",
-      animate: false,
-      gutter: 30, // default gutter size
-      static: true,
-      useMin: false,
-      maxColumns: 2,
-      useTransform: true
-    });
+      const magicForksGrid = new MagicGrid({
+        container: "#forks_section",
+        animate: false,
+        gutter: 30, // default gutter size
+        static: true,
+        useMin: false,
+        maxColumns: 2,
+        useTransform: true
+      });
 
-    $("document").ready(() => {
-      magicProjectsGrid.listen();
-      magicForksGrid.listen();
-    });
-  </script>
+      $("document").ready(() => {
+        magicProjectsGrid.listen();
+        magicForksGrid.listen();
+      });
+    </script>
 
 
 </body>
